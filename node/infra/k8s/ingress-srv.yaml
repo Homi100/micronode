@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
-    
+
 spec:
   rules:
     - host: nuvexaphotos.com
@@ -18,21 +18,21 @@ spec:
               service:
                 name: photosmngservice-srv
                 port:
-                  number: 8004
+                  number: 8001
           - path: /api/photo/user/?(.*)
             pathType: Prefix
             backend:
               service:
                 name: photosmngservice-srv
                 port:
-                  number: 8004
+                  number: 8001
           - path: /api/photo/?(.*)
             pathType: Prefix
             backend:
               service:
                 name: photosmngservice-srv
                 port:
-                  number: 8004
+                  number: 8001
           - path: /api/user/login
             pathType: Prefix
             backend:
@@ -53,12 +53,18 @@ spec:
               service:
                 name: storagemngservice-srv
                 port:
-                  number: 8002 
+                  number: 8002
           - path: /api/usage/user/?(.*)
             pathType: Prefix
             backend:
               service:
                 name: usagemngservice-srv
                 port:
-                  number: 8003                        
-                
+                  number: 8003
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend-srv
+                port:
+                  number: 3000
