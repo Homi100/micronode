@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: photosmngservice-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: photosmngservice
+  template:
+    metadata:
+      labels:
+        app: photosmngservice
+    spec:
+      containers:
+        - name: photosmngservice
+          image: us.gcr.io/image-project-123/photosmngservice
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: photosmngservice-srv
+spec:
+  selector:
+    app: photosmngservice
+  ports:
+    - name: photosmngservice
+      protocol: TCP
+      port: 8001
+      targetPort: 8001

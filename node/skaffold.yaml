@@ -1,0 +1,58 @@
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
+build:
+  googleCloudBuild:
+    projectId: image-project-123
+  artifacts:
+    - image: us.gcr.io/image-project-123/photosmngservice
+      context: PhotosMngService
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: us.gcr.io/image-project-123/loggingservice
+      context: LoggingService
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: us.gcr.io/image-project-123/frontend
+      context: FrontendService
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: us.gcr.io/image-project-123/storagemngservice
+      context: StorageMngService
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: us.gcr.io/image-project-123/usagemngservice
+      context: UsageMngService
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
+    - image: us.gcr.io/image-project-123/usermngservice
+      context: UserMngService
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "*.js"
+            dest: .
