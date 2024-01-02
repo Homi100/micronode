@@ -18,8 +18,7 @@ server.listen(8003, () => {
   console.log("Server running on http://localhost:8003/");
 });
 
-const MONGO_URL =
-  "mongodb+srv://ahmadareeb3026:1234@cluster0.u0yv2iy.mongodb.net/cloud_auth_svc?retryWrites=true&w=majority";
+const MONGO_URL = "";
 mongoose.connect(MONGO_URL);
 mongoose.connection.on("error", (error) => console.log(error));
 mongoose.connection.once("open", () => {
