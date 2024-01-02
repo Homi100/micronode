@@ -1,5 +1,7 @@
 # Nuvexa-Photos
 A web App based on Microservices Architecture for uploading and deleting pictures
+## Images
+
 ## Overview
 
 This project is a full-stack application with a frontend built with React and a backend built with Node.js and Express.js. It's organized into several microservices, each with its own responsibilities, and uses MongoDB as the database. The project also includes Kubernetes configuration files for deploying the microservices.
