@@ -2,6 +2,8 @@
 A web App based on Microservices Architecture for uploading and deleting pictures
 ## Screenshots
 ![](Images/login.jpg)
+![](Images/main%20uploda%20page.jpg)
+
 
 ## Overview
 
