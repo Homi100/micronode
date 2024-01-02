@@ -18,12 +18,12 @@ const logToApi = async (event, message) => {
   }
 };
 
-// Multer
+// Multer middleware for handling file uploads
 const upload = multer({
     limits: { fileSize: 10485760 }, // File size limit (10MB)
   }).single("image");
 
-
+//cloudinary configuration
 cloudinary.config({
     cloud_name: "deragsdak",
     api_key: "487494414134748",
@@ -31,7 +31,8 @@ cloudinary.config({
   })
 // ImageUpload endpoint
 router.post("/upload", upload, async (req, res) => {
-    console.log(req.file);
+  console.log(req.file);
+  //nothing to upload
     if (!req.file) {
       await logToApi('Image upload failed', 'No file uploaded');
       return res.status(400).json({ error: "No file uploaded" });
@@ -41,18 +42,19 @@ router.post("/upload", upload, async (req, res) => {
     const totalSize = req.file.size;
     const user = req.body.userId;
     // Update user's storage
-    let userStorage;
+  let userStorage;
+  //getting user storage
     userStorage = await axios.get(
       `${process.env.STORAGE_SERVICE_URL}/api/storage/user/${user}`
     );
-  
+  //storage is 0
     if (!userStorage.data.data) {
       userStorage = await axios.post(
         `${process.env.STORAGE_SERVICE_URL}/api/storage/`,
         { totalStorage: 0, user }
       );
     }
-  
+  //otherwise
     if (
       userStorage.data.data.totalStorage + totalSize >
       process.env.STORAGE_LIMIT
