@@ -20,10 +20,6 @@ This project is a full-stack application with a frontend built with React and a 
 ## Deployment
 
 The `.yaml` files in the `node/infra/k8s/` directory are used to create deployments of the microservices. Each running container of a microservice is contained in a pod, and each deployment that is affiliated with a pod has a cluster IP service through which they communicate. The `ingress.yaml` file configures the Ingress controller, which directs outward traffic from the browser to specific cluster IP services according to the endpoint.
-## CI/CD Configuration
-# Microservices Project
-
-This repository contains the source code for our microservices project.
 
 ## CI/CD Configuration
 
