@@ -1,5 +1,6 @@
 **/node_modules/
 **/*.yaml
 # Ignore everything in the "node" directory
-node/*
+/node/*
 
+!node/LoggingService/
