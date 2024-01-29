@@ -112,9 +112,26 @@ gcloud container clusters get-credentials <cluster-name>
 Enable the Cloud Build service on GCP.
 #### 2. Update Skaffold Configuration:
 
-In infra/k8s/skaffol.yaml:
-Change projectId to your GCP project ID.
+##### In infra/k8s/skaffol.yaml: <br>
+Change projectId to your GCP project ID. <br>
 Update the image field to match your project ID.
+
+#### 3. Setup Ingress-Nginx:
+You can Go to: 
+<a href="https://www.kubernetes.github.io/ingress-nginx">Ingress controller documentation</a> <br>
+and follow the steps to install the ingress controller but if you want to follow my commands they are given below. Commands change from time to time accordingly so you may have to refer to documentation.
+
+Run: <br>
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/cloud/deploy.yaml
+```
+* Verify pods are running:
+``` bash
+kubectl get pods --namespace=ingress-nginx
+
+```
+### Deploy Services with Skaffold
+
 
 ## Load Testing
 
