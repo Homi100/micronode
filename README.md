@@ -179,7 +179,7 @@ To ensure the scalability and performance of the microservices, load testing can
    locust -f locustfile.py
    ```
 #### Screen Shots of the Load Testing are attached below:
-![](Images/locust.jpg = 250 x 250)
+![](Images/locust.jpg {width=40px height=400px})
 ![](Images/locust-request-per-second.jpg)
 ![](Images/locust-response-time.jpg)
    
