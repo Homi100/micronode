@@ -95,11 +95,26 @@ Our CI/CD pipeline is configured with Skaffold to perform the following tasks:
 # Install GCloud Terminal
 gcloud auth login
 gcloud init
-```
+
 
 # Choose option 1 to re-initialize the default configuration with new settings.
 # Select your GCP account and project.
+```
 
+### Install Kubectl on GCP
+```bash
+gcloud components install kubectl
+gcloud container clusters get-credentials <cluster-name>
+```
+### Google Cloud Build
+#### 1. Enable Cloud Build:
+
+Enable the Cloud Build service on GCP.
+#### 2. Update Skaffold Configuration:
+
+In infra/k8s/skaffol.yaml:
+Change projectId to your GCP project ID.
+Update the image field to match your project ID.
 
 ## Load Testing
 
