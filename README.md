@@ -81,13 +81,24 @@ Our CI/CD pipeline is configured with Skaffold to perform the following tasks:
 
 ### Deployment Process
 
-Skaffold facilitates the deployment of our microservices to a Kubernetes cluster. The deployment configuration is stored in the `skaffold.yaml` file.
+### Prerequisites
 
-To deploy the microservices locally, run the following command:
+1. **GCP Account:**
+   - Create or log in to your Google Cloud Platform (GCP) account.
+
+2. **Enable Kubernetes Cluster API:**
+   - Enable the Kubernetes Cluster API before creating a cluster.
+
+### Set Up GCP Terminal
 
 ```bash
-skaffold dev -v debug (please refer to other commands in skaffold documentation)
+# Install GCloud Terminal
+gcloud auth login
+gcloud init
 ```
+
+# Choose option 1 to re-initialize the default configuration with new settings.
+# Select your GCP account and project.
 
 
 ## Load Testing
