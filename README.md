@@ -51,6 +51,7 @@ The project is deployed on a Google Cloud Platform (GCP) Kubernetes Cluster.
 | UserMngService        | Manages user data.                                           |
 | Kubernetes Configurations | Configuration files for deploying the services on Kubernetes.|
 | Skaffold Configuration | Configuration file for Skaffold, facilitating continuous development for Kubernetes applications.|
+|Cloudinary|All the Images are being stored on cloudinary service|
 
 ## Deployment
 
