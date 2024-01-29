@@ -12,7 +12,7 @@ class MyUser(HttpUser):
         response = self.client.post(
             "http://nuvexaphotos.com/api/user/login",  # Update with your login endpoint
             data={
-                "email": "ahmadareeb15@gmail.com",
+                "email": "hello@gmail.com",
                 "password": "12345"
             }
         )
