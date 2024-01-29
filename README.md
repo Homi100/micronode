@@ -22,10 +22,12 @@ A web App based on Microservices Architecture for uploading and deleting picture
   - [Deployment Process](#deployment-process)
 - [Getting Started](#getting-started)
 
-## Screenshots
+
 ## Architecture diagram of project
 ![](Images/Architecture.jpg)
 
+
+## Screenshots
 #### login page
 ![](Images/login.jpg)
 #### main upload page
