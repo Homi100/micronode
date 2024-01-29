@@ -1,5 +1,27 @@
 # Nuvexa-Photos
 A web App based on Microservices Architecture for uploading and deleting pictures
+
+## Table of Contents
+- [Screenshots](#screenshots)
+- [Architecture diagram of project](#architecture-diagram-of-project)
+- [Overview](#overview)
+  - [Deployment on GCP Kubernetes Cluster](#deployment-on-gcp-kubernetes-cluster)
+- [Structure](#structure)
+  - [Frontend](#frontend)
+  - [FrontendService](#frontendservice)
+  - [LoggingService](#loggingservice)
+  - [UsageMngService](#usagemngservice)
+  - [StorageMngService](#storagemngservice)
+  - [PhotosMngService](#photosmngservice)
+  - [UserMngService](#usermngservice)
+  - [Kubernetes Configurations](#kubernetes-configurations)
+  - [Skaffold Configuration](#skaffold-configuration)
+- [Deployment](#deployment)
+- [CI/CD Configuration](#cicd-configuration)
+  - [Build Process](#build-process)
+  - [Deployment Process](#deployment-process)
+- [Getting Started](#getting-started)
+
 ## Screenshots
 #### login page
 ![](Images/login.jpg)
@@ -11,19 +33,24 @@ A web App based on Microservices Architecture for uploading and deleting picture
 
 ## Overview
 This project is a full-stack application with a frontend built with React and a backend built with Node.js and Express.js. It's organized into several microservices, each with its own responsibilities, and uses MongoDB as the database. The project also includes Kubernetes configuration files for deploying the microservices.
-### The project is deployed on GCP Kubernetes Cluster
+
+### Deployment on GCP Kubernetes Cluster
+
+The project is deployed on a Google Cloud Platform (GCP) Kubernetes Cluster.
 
 ## Structure
 
-- `frontend/`: Contains the code for the frontend application built with React.
-- `node/FrontendService/`: Contains the code for the FrontendService. This service handles the user interface and interactions.
-- `node/LoggingService/`: Contains the code for the LoggingService. This service collects logs whenever users update, delete, or add images.
-- `node/UsageMngService/`: Contains the code for the UsageMngService. This service monitors daily transactions and usage. and stores the data on mongo cloud atlas.
-- `node/StorageMngService/`: Contains the code for the StorageMngService. This service ensures that no user can upload more than 10MB of storage.
-- `node/PhotosMngService/`: Contains the code for the PhotosMngService. This service stores all the photos on Cloudinary.
-- `node/UserMngService/`: Contains the code for the UserMngService. This service is responsible for managing user data.
-- `node/infra/k8s/`: Contains Kubernetes configuration files for deploying the services.
-- `node/Skaffold.yaml`: This file is used by Skaffold, a command-line tool that facilitates continuous development for Kubernetes applications. It automates the task of building and deploying applications to a Kubernetes cluster.
+| Service               | Description                                                  |
+|-----------------------|--------------------------------------------------------------|
+| Frontend              | Frontend application built with React.                       |
+| FrontendService       | Handles the user interface and interactions.                 |
+| LoggingService        | Collects logs whenever users update, delete, or add images. |
+| UsageMngService       | Monitors daily transactions and usage, stores data on MongoDB Cloud Atlas. |
+| StorageMngService     | Ensures that no user can upload more than 10MB of storage.    |
+| PhotosMngService      | Stores all the photos on Cloudinary.                         |
+| UserMngService        | Manages user data.                                           |
+| Kubernetes Configurations | Configuration files for deploying the services on Kubernetes.|
+| Skaffold Configuration | Configuration file for Skaffold, facilitating continuous development for Kubernetes applications.|
 
 ## Deployment
 
@@ -47,9 +74,5 @@ Skaffold facilitates the deployment of our microservices to a Kubernetes cluster
 
 To deploy the microservices locally, run the following command:
 
-```skaffold dev -v debug (please refer to other commands in skaffold documentation)```
-
-## Getting Started
-
-Each service has its own `Dockerfile` for building a Docker image. You can build and run each service individually, or use the Kubernetes configuration files in `node/infra/k8s/` to deploy the entire application.
-
+```bash
+skaffold dev -v debug (please refer to other commands in skaffold documentation)
