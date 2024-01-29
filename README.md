@@ -28,8 +28,7 @@ A web App based on Microservices Architecture for uploading and deleting picture
 ![](Images/Architecture.jpg)
 ### Overview of Cloud Architecture
 ![](Images/Cloud%20Architecture.jpg)
-### Role of Skaffold in Architecture
-![](Images/skaffold.jpg)
+
 
 
 ## Screenshots
@@ -69,6 +68,8 @@ The project is deployed on a Google Cloud Platform (GCP) Kubernetes Cluster.
 ## CI/CD Configuration
 
 For Continuous Integration and Continuous Deployment (CI/CD), we are using Skaffold, a tool for streamlining the development workflow for Kubernetes applications.
+### Skaffold in Architecture
+![](Images/skaffold.jpg)
 
 ## Deployment
 
