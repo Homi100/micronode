@@ -77,3 +77,22 @@ To deploy the microservices locally, run the following command:
 
 ```bash
 skaffold dev -v debug (please refer to other commands in skaffold documentation)
+
+
+## Load Testing
+
+To ensure the scalability and performance of the microservices, load testing can be performed using [Locust](https://locust.io/), a Python-based load testing tool.
+
+### Prerequisites
+
+- Install Locust: `pip install locust`
+
+### Running Load Tests
+
+1. **Create a Locust file:**
+   - Create a file named `locustfile.py` with appropriate test scenarios.
+
+2. **Run Locust in your terminal:**
+   ```bash
+   locust -f locustfile.py
+
