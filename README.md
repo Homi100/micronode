@@ -42,7 +42,7 @@ The project is deployed on a Google Cloud Platform (GCP) Kubernetes Cluster.
 
 ## Structure
 
-| Service               | Description                                                  |
+| Microservices Services| Description                                                  |
 |-----------------------|--------------------------------------------------------------|
 | Frontend              | Frontend application built with React.                       |
 | FrontendService       | Handles the user interface and interactions.                 |
@@ -51,9 +51,13 @@ The project is deployed on a Google Cloud Platform (GCP) Kubernetes Cluster.
 | StorageMngService     | Ensures that no user can upload more than 10MB of storage.    |
 | PhotosMngService      | Stores all the photos on Cloudinary.                         |
 | UserMngService        | Manages user data.                                           |
+
+| Other Services               | Description                                                  |
+|-----------------------|--------------------------------------------------------------|
 | Kubernetes Configurations | Configuration files for deploying the services on Kubernetes.|
-| Skaffold Configuration | Configuration file for Skaffold, facilitating continuous development for Kubernetes applications.|
-|Cloudinary|All the Images are being stored on cloudinary service|
+| Skaffold Configuration    | Configuration file for Skaffold, facilitating continuous development for Kubernetes applications.|
+|Mongo DB |   All the users data and logging data is being stored in MongoDB Atlas                |
+| Cloudinary                 | All the Images are being stored on cloudinary service|
 
 
 
