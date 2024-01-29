@@ -132,6 +132,29 @@ kubectl get pods --namespace=ingress-nginx
 ```
 ### Deploy Services with Skaffold
 
+#### Restart Skaffold:
+
+Stop any running Skaffold instances.
+
+Run:
+
+```bash
+skaffold dev -v debug
+```
+* Skaffold will build images using Google Cloud Build, and images will be stored in the Google Cloud Repository.
+* The above commands that we executed created 2 things for us. First it created Ingress controller and the oher one is Load balancer
+#### Connect to Load Balancer:
+
+* Find the Load Balancer IP address on GCP Networking Service > Load Balancer.
+* Update your hosts file (e.g., c:\Windows\System32\Drivers\etc\hosts in Windows 10) to map the IP address to your domain (e.g., nuvexaphotos.com).
+* add the ip address like :
+  34.66.119.150 https://nuvexaphotos.com (e.g your load balancer ip address is 34.66.119.150 you will change it accordingly)
+* All building processes are executed in Google Cloud Build, and the services will now be running on a remote virtual machine.
+
+### Access Your Application:
+
+Open your browser and go to ``` https://nuvexaphotos.com``` to access your running application.
+
 
 ## Load Testing
 
