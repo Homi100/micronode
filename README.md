@@ -178,10 +178,10 @@ To ensure the scalability and performance of the microservices, load testing can
    ```bash
    locust -f locustfile.py
    ```
-**Screen Shots of the Load Testing are attached below:**
-   ![](Images/locust.jpg)
-   ![](Images/locust-request-per-second.jpg)
-   ![](Images/locust-response-time.jpg)
+#### Screen Shots of the Load Testing are attached below:
+![](Images/locust.jpg)
+![](Images/locust-request-per-second.jpg)
+![](Images/locust-response-time.jpg)
    
    
    * Note: Ensure that the load testing is performed in a controlled environment to avoid impacting the production system. Always monitor system performance during the test
