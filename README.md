@@ -27,7 +27,7 @@ A web App based on Microservices Architecture for uploading and deleting picture
 ### Microservices Architecture
 ![](Images/Architecture.jpg)
 ### Overview of Cloud Architecture
-![](Images/Cloud Architecture.jpg)
+![](Images/Cloud%20Architecture.jpg)
 ### Role of Skaffold in Architecture
 ![](Images/skaffold.jpg)
 
