@@ -29,7 +29,7 @@ A web App based on Microservices Architecture for uploading and deleting picture
 
 ## Architecture diagrams
 ### Microservices Architecture
-![](Images/Architecture.jpg)
+![](Images/Architecture.png)
 ### Overview of Cloud Architecture
 ![](Images/Cloud%20Architecture.jpg)
 
