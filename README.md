@@ -28,10 +28,11 @@ A web App based on Microservices Architecture for uploading and deleting picture
 
 
 ## Architecture diagrams
-### Microservices Architecture
+
+## Overview Of Project Architecture
+![](Images/Cloud%20Architecture%20GCP.PNG)
+### Microservices Communication Architecture
 ![](Images/Architecture.png)
-### Overview of Cloud Architecture
-![](Images/Cloud%20Architecture.jpg)
 
 
 
@@ -39,9 +40,13 @@ A web App based on Microservices Architecture for uploading and deleting picture
 
 
 
-### Deployment on GCP Kubernetes Cluster
+
+## Deployment on GCP Kubernetes Cluster
 
 The project is deployed on a Google Cloud Platform (GCP) Kubernetes Cluster.
+The deployment of pods is configured using the Kubernetes cluster and outside traffic is handled using the Ingress controller.
+### Overview of Cloud Architecture
+![](Images/Cloud%20Architecture.jpg)
 
 ## Structure
 
