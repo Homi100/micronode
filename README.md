@@ -5,27 +5,6 @@ A web App based on Microservices Architecture for uploading and deleting picture
 ### Main Home page
 ![](Images/main%20uploda%20page.jpg)
 
-## Table of Contents
-- [Screenshots](#screenshots)
-- [Architecture diagram of project](#architecture-diagram-of-project)
-- [Overview](#overview)
-  - [Deployment on GCP Kubernetes Cluster](#deployment-on-gcp-kubernetes-cluster)
-- [Structure](#structure)
-  - [Frontend](#frontend)
-  - [FrontendService](#frontendservice)
-  - [LoggingService](#loggingservice)
-  - [UsageMngService](#usagemngservice)
-  - [StorageMngService](#storagemngservice)
-  - [PhotosMngService](#photosmngservice)
-  - [UserMngService](#usermngservice)
-  - [Kubernetes Configurations](#kubernetes-configurations)
-  - [Skaffold Configuration](#skaffold-configuration)
-- [Deployment](#deployment)
-- [CI/CD Configuration](#cicd-configuration)
-  - [Build Process](#build-process)
-  - [Deployment Process](#deployment-process)
-- [Getting Started](#getting-started)
-
 
 ## Architecture diagrams
 
