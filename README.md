@@ -126,9 +126,9 @@ kubectl get pods --namespace=ingress-nginx
 
 #### Restart Skaffold:
 
-Stop any running Skaffold instances.
+First Stop any running Skaffold instances, if you are running the project for the first time there wont be any ri=unning instance
 
-Run:
+**Now run Skaffold Configuration file**
 
 ```bash
 skaffold dev -v debug
@@ -172,4 +172,5 @@ To ensure the scalability and performance of the microservices, load testing can
    
    
    * Note: Ensure that the load testing is performed in a controlled environment to avoid impacting the production system. Always monitor system performance during the test
+
 
