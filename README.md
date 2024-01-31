@@ -68,7 +68,7 @@ Our CI/CD pipeline is configured with Skaffold to perform the following tasks:
 2. **Continuous Integration:** We have integrated Skaffold into our CI workflow, ensuring that code changes trigger automated builds and tests.
    
 
-### Deployment Process
+## Getting Started
 
 ### Prerequisites
 
