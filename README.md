@@ -1,6 +1,7 @@
 # Nuvexa-Photos
 A web App based on Microservices Architecture for uploading and deleting pictures. This project is a full-stack application with a frontend built with React and a backend built with Node.js and Express.js. It's organized into several microservices, each with its own responsibilities, and uses MongoDB as the database. The project also includes Kubernetes configuration files for deploying the microservices.
-*Check out Explanation of this article on medium <a href = "https://medium.com/@ahmadareeb3026/streamlining-microservices-of-a-mern-app-on-gcp-using-gke-a-comprehensive-guide-286a80f2ec38?source=friends_link&sk=1c9f0e9d4b8092ae0b257a4983d82ab5"> Deploying Microservices of a MERN App on GCP using GKE: A Comprehensive guide </a>*
+<br>
+***Check out Explanation of this article on medium** <a href = "https://medium.com/@ahmadareeb3026/streamlining-microservices-of-a-mern-app-on-gcp-using-gke-a-comprehensive-guide-286a80f2ec38?source=friends_link&sk=1c9f0e9d4b8092ae0b257a4983d82ab5"> Deploying Microservices of a MERN App on GCP using GKE: A Comprehensive guide </a>*
 ### Login page
 ![](Images/login.jpg)
 ### Main Home page
