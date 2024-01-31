@@ -126,7 +126,7 @@ kubectl get pods --namespace=ingress-nginx
 
 #### Restart Skaffold:
 
-First Stop any running Skaffold instances, if you are running the project for the first time there wont be any ri=unning instance
+First Stop any running Skaffold instances, if you are running the project for the first time there wont be any running instance
 
 **Now run Skaffold Configuration file**
 
