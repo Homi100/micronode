@@ -79,7 +79,10 @@ Our CI/CD pipeline is configured with Skaffold to perform the following tasks:
    - Enable the Kubernetes Cluster API before creating a cluster.
 
 ### Set Up GCP Terminal
+#### Install GCloud terminal for your ease or you can go with the GCP terminal
 
+
+connect your GCP account
 ```bash
 # Install GCloud Terminal
 gcloud auth login
