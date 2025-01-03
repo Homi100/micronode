@@ -9,7 +9,8 @@ const port = 8000;
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect("");
+
+mongoose.connect('mongodb+srv://krishnasarwe:S6TBvY5g8H1ZgNUU@cluster0.6dqwu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 const db = mongoose.connection;
 
 // Check MongoDB connection
