@@ -18,7 +18,7 @@ server.listen(8002, () => {
 
 const MONGO_URL = "";
 
-mongoose.connect(MONGO_URL);
+mongoose.connect('mongodb+srv://krishnasarwe:S6TBvY5g8H1ZgNUU@cluster0.6dqwu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 mongoose.connection.on("error", (error) => console.log(error));
 mongoose.connection.once("open", () => {
   console.log("Connected to the database");
